@@ -110,7 +110,7 @@ public class Database implements Mutable{
             int from = parseAndCheckIndex(String.valueOf(origin));
             int to = parseAndCheckIndex(String.valueOf(bound));
             checkTwoIndexes(from, to);
-            return Arrays.copyOfRange(lines, from, to);
+            return Arrays.copyOfRange(lines, from, to + 1);
         } catch (NullPointerException | NumberFormatException | IndexOutOfBoundsException | IncorrectIndexesException e) {
             System.out.println(e.getMessage());
         }
